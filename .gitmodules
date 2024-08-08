@@ -1,6 +1,6 @@
-[submodule "faithwork-api"]
-	path = faithwork-api
-	url = https://github.com/AncientDaimyo/faithwork-api
-[submodule "faithwork-web"]
-	path = faithwork-web
+[submodule "volumes/build/faithwork-web"]
+	path = volumes/build/faithwork-web
 	url = https://github.com/AncientDaimyo/faithwork-web
+[submodule "volumes/build/faithwork-api"]
+	path = volumes/build/faithwork-api
+	url = https://github.com/AncientDaimyo/faithwork-api
