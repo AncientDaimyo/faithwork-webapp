@@ -1,6 +1,7 @@
 [submodule "faithwork-web"]
 	path = app/faithwork-web
 	url = https://github.com/AncientDaimyo/faithwork-web
+
 [submodule "faithwork-api"]
 	path = app/faithwork-api
 	url = https://github.com/AncientDaimyo/faithwork-api
