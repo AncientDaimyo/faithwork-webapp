@@ -1,7 +1,33 @@
 services:
   faithwork-web:
+    container_name: faithwork_web
     build:
-      context: ./docker/web
+      context: ./app/faithwork-web
       dockerfile: Dockerfile
     ports:
       - "80:80"
+
+  faithwork-api:
+    build:
+      context: ./docker/nginx
+    volumes:
+      - ./app/faithwork-api:/symfony
+    container_name: faithwork-api
+    restart: always
+    ports:
+      - "8080:80"
+
+  php-fpm:
+    build:
+      context: ./docker/php-fpm
+    volumes:
+      - ./app/faithwork-api:/symfony
+    container_name: php-fpm
+
+  php-cli:
+    build:
+      context: ./docker/php-cli
+    volumes:
+      - ./app/faithwork-api:/symfony
+    command: sleep 10000
+    container_name: php-cli
